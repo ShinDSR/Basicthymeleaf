@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Input</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Input Page</div>
+        <hr/>
+        <form action="/view" method="POST" enctype="multipart/form-data">
+            Nama    : <input type="text" name="inputNama"/><br>
+            Tanggal Lahir : <input type="date" name="inputTanggal"/><br>
+            Foto    : <input type="file" name="inputFoto" onchange="loadFile(event)" /><br>                   
+            <p><img id="output" width="200" height="300" /></p>
+
+<script>
+var loadFile = function(event) {
+	var inputFoto = document.getElementById('output');
+	inputFoto.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+            <br>
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>

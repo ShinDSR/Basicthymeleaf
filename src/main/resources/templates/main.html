@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>View</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>View Page</div>
+        <hr/>
+        <p>
+            Nama            : 
+            <a th:text="${attNama}"/>
+        <p/>
+        <p>
+            Tanggal Lahir   : 
+            <a th:text="${attTanggal}"/>
+        <p/>
+        <p>
+            <img th:src="${attFoto}" alt="No Image" width="200" height="300"/>
+        </p>
+    </body>
+</html>
